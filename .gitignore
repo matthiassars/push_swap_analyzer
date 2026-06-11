@@ -53,3 +53,11 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+.vscode/*
+
+generate_seq
+count_ps_ops
+tmp
+*.svg
+data.csv
