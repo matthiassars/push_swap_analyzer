@@ -45,7 +45,7 @@ The first two plots are 3D plots which can look something like:
 ![plot1](img/plot1.png)
 ![plot2](img/plot2.png)
 
-The three strategies are plotted in three colours with transparent dots. The adaptive strategy is plotted with opaque dots. The only difference between the two plots is the scaling of the z axis and the orientation of the xy plane.
+The three strategies are plotted in three colours; the adaptive strategy is plotted with bigger dots. The only difference between the two plots is the scaling of the z axis and the orientation of the xy plane.
 
 The third plot shows the minimum number of operations for each sequence (using the same colour coding as above). The intention of this one is to come op with good threshold values for the adaptive strategy.
 

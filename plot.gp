@@ -16,11 +16,11 @@ set hidden3d
 set view 60, 60
 
 splot \
-	"data.csv" using 1:2:($3!=$6 ? $3 : NaN) with points pt 7 ps .3 lc rgb "#DDBB00BB" notitle, \
+	"data.csv" using 1:2:($3!=$6 ? $3 : NaN) with points pt 7 ps .15 lc rgb "#BB00BB" notitle, \
+	"data.csv" using 1:2:($4!=$6 && $4!=$3 ? $4 : NaN) with points pt 7 ps .15 lc rgb "#00BBBB" notitle, \
+	"data.csv" using 1:2:($5!=$6 && $4!=$3 && $5!=$4? $5 : NaN) with points pt 7 ps .15 lc rgb "#BBBB00" notitle, \
 	"data.csv" using 1:2:($3==$6 ? $3 : NaN) with points pt 7 ps .3 lc rgb "#BB00BB" title "simple", \
-	"data.csv" using 1:2:($4!=$6 && $4!=$3 ? $4 : NaN) with points pt 7 ps .3 lc rgb "#DD00BBBB" notitle, \
 	"data.csv" using 1:2:($4==$6 && $4!=$3 ? $4 : NaN) with points pt 7 ps .3 lc rgb "#00BBBB" title "medium", \
-	"data.csv" using 1:2:($5!=$6 && $4!=$3 && $5!=$4? $5 : NaN) with points pt 7 ps .3 lc rgb "#DDBBBB00" notitle, \
 	"data.csv" using 1:2:($5==$6 && $4!=$3 && $5!=$4? $5 : NaN) with points pt 7 ps .3 lc rgb "#BBBB00" title "complex"
 
 ###############################################################################
@@ -47,11 +47,11 @@ set view 60, 300
 set zrange [0:20000]
 
 splot \
-	"data.csv" using 1:2:($3!=$6 ? $3 : NaN) with points pt 7 ps .3 lc rgb "#DDBB00BB" notitle, \
+	"data.csv" using 1:2:($3!=$6 ? $3 : NaN) with points pt 7 ps .15 lc rgb "#BB00BB" notitle, \
+	"data.csv" using 1:2:($4!=$6 && $4!=$3 ? $4 : NaN) with points pt 7 ps .15 lc rgb "#00BBBB" notitle, \
+	"data.csv" using 1:2:($5!=$6 && $4!=$3 && $5!=$4? $5 : NaN) with points pt 7 ps .15 lc rgb "#BBBB00" notitle, \
 	"data.csv" using 1:2:($3==$6 ? $3 : NaN) with points pt 7 ps .3 lc rgb "#BB00BB" title "simple", \
-	"data.csv" using 1:2:($4!=$6 && $4!=$3 ? $4 : NaN) with points pt 7 ps .3 lc rgb "#DD00BBBB" notitle, \
 	"data.csv" using 1:2:($4==$6 && $4!=$3 ? $4 : NaN) with points pt 7 ps .3 lc rgb "#00BBBB" title "medium", \
-	"data.csv" using 1:2:($5!=$6 && $4!=$3 && $5!=$4? $5 : NaN) with points pt 7 ps .3 lc rgb "#DDBBBB00" notitle, \
 	"data.csv" using 1:2:($5==$6 && $4!=$3 && $5!=$4? $5 : NaN) with points pt 7 ps .3 lc rgb "#BBBB00" title "complex"
 
 ###############################################################################
