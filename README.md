@@ -83,7 +83,7 @@ $ ./generate_seq -m 8 -d .75
 ./count_ps_ops [-o <filename>] sequence
 ```
 
-This reads the push_swap operations from `stdin` and applies them to the given sequence. If the sorting is correct, it appends the number of operations to the file given by the `-o` flag, or prints it to `stdout` if no filename is given. It it doesn't check out, it prints `KO,`.
+This reads the push_swap operations from `stdin` and applies them to the given sequence. If the sorting is correct, it appends the number of operations to the file given by the `-o` flag, or prints it to `stdout` if no filename is given. It it doesn't check out, it prints `KO`.
 
 
 For example (in Bash):
