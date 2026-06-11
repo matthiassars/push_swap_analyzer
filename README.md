@@ -14,7 +14,7 @@ Run with
 ```
 It appends data to the file given by the `-o` flag. The number of data points is given by the `-n` flag. Defaults are: `-n`: 256; `-o`: `data.csv`. You have to give the path to your `push_swap` program.
 
-I then passes the data to a Gnuplot script which produces a four graphs.
+I then passes the data to a Gnuplot script which produces a few graphs.
 
 (No need to `make` the helper programs; this is done inside the script.)
 
