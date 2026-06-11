@@ -20,7 +20,7 @@ I then passes the data to a Gnuplot script which produces a few graphs.
 
 You can also process the generated data any way you wish, and feel free to adapt the scripts to your needs.
 
-### Bash Script & Data
+## Bash Script & Data
 
 In the script `push_swap_analyzer.sh`, first a sequence is generated with a random size and and a random disorder. (See below in the Helper Programs section). `push_swap` sorts this sequence using all four strategies, and the number of operations is counted. This gives a data point that contains:
 1. the size of the sequence,
@@ -32,7 +32,7 @@ In the script `push_swap_analyzer.sh`, first a sequence is generated with a rand
 
 The data is stored in CSV format: the values are separated by commata, the data points by newlines.
 
-### Plots
+## Plots
 
 The Gnuplot script `plots.gp` generates a few graphs.
 
@@ -51,9 +51,9 @@ The last plot shows the number of operations against the sequence length on a lo
 
 ![plot4](img/plot4.png)
 
-### Helper Programs
+## Helper Programs
 
-#### `generate_seq`
+### `generate_seq`
 
 ```
 ./generate_seq [-o <filename>] [-n <size>] [-m <maximum size>] [-d <disorder>]
@@ -67,7 +67,7 @@ The numbers in the sequence range from 0 to size - 1, without duplicates.
 
 You can set a disorder number (between 0 and 1) with the `-d` flag. The program will try to match this number. By default, a random disorder number is chosen. Note that this is not the same as generating a random sequence. (If you want a randomly shuffled sequence, you can set `-d .5`.)
 
-#### `count_ps_ops`
+### `count_ps_ops`
 
 ```
 ./count_ps_ops [-o <filename>] sequence
