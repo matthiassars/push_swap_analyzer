@@ -23,9 +23,13 @@ make --silent
 for i in $(seq 1 "$N")
 do
 	ARG="$(./generate_seq -m 1024 -o $FILENAME)"
+    echo -n "," >> $FILENAME
 	$PUSH_SWAP_PATH --simple $ARG | ./count_ps_ops -o $FILENAME $ARG
+	echo -n "," >> $FILENAME
 	$PUSH_SWAP_PATH --medium $ARG | ./count_ps_ops -o $FILENAME $ARG
+	echo -n "," >> $FILENAME
 	$PUSH_SWAP_PATH --complex $ARG | ./count_ps_ops -o $FILENAME $ARG
+	echo -n "," >> $FILENAME
 	$PUSH_SWAP_PATH --adaptive $ARG | ./count_ps_ops -o $FILENAME $ARG
 	echo "" >> $FILENAME
 done

@@ -62,7 +62,7 @@ The last plot shows the number of operations against the sequence length on a lo
 ```
 ./generate_seq [-o <filename>] [-n <size>] [-m <maximum size>] [-d <disorder>]
 ```
-This generates a sequence and prints it to `stdout` and appends the size and disorder numbers to the file given by the `-o` flag, or `stderr` if no filename is given. (Both followed by a comma.)
+This generates a sequence and prints it to `stdout` and appends the size and disorder numbers to the file given by the `-o` flag, or `stderr` if no filename is given (separated by a comma.)
 
 The sequence size is either given by the `-n` flag, or a random number up to the number given by the `-m` flag. This is 1024 by default.
 
@@ -74,7 +74,7 @@ For example:
 ```
 $ ./generate_seq -m 8 -d .75
 4 1 2 3 0
-5,0.700000,
+5,0.700000
 ```
 
 ### `count_ps_ops`
@@ -83,12 +83,12 @@ $ ./generate_seq -m 8 -d .75
 ./count_ps_ops [-o <filename>] sequence
 ```
 
-This reads the push_swap operations from `stdin` and applies them to the given sequence. If the sorting is correct, it appends the number of operations (followed by a comma) to the file given by the `-o` flag, or prints it to `stdout` if no filename is given. It it doesn't check out, it prints `KO,`.
+This reads the push_swap operations from `stdin` and applies them to the given sequence. If the sorting is correct, it appends the number of operations to the file given by the `-o` flag, or prints it to `stdout` if no filename is given. It it doesn't check out, it prints `KO,`.
 
 
 For example (in Bash):
 ```
 $ ARG=$(./generate_seq -n 5 -d 1) ; ./push_swap --simple $ARG | ./count_ps_ops $ARG
-5,1.000000,
-10,
+5,1.000000
+10
 ```

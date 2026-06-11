@@ -81,7 +81,7 @@ int	main(int argc, char** argv) {
 		}
 	}
 
-	fprintf(fptr, "%d,%f,", size, compute_disorder(a, size));
+	fprintf(fptr, "%d,%f", size, compute_disorder(a, size));
 	if (fptr == stderr)
 		fprintf(fptr, "\n");
 

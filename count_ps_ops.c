@@ -63,9 +63,9 @@ int main(int argc, char** argv) {
 
 	bool ok = (is_sorted(&ps.a) && ps.b.size == 0);
 	if (ok)
-		fprintf(ps.fptr, "%d,", ps.count_ops);
+		fprintf(ps.fptr, "%d", ps.count_ops);
 	else
-		fprintf(ps.fptr, "KO,");
+		fprintf(ps.fptr, "KO");
 	if (ps.fptr == stdout)
 		fprintf(ps.fptr, "\n");
 
