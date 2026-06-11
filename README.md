@@ -4,7 +4,7 @@
 
 ## Description
 
-A statistical analyzer script for the project `push_swap` from the 42 core curriculum (version 1.1 in the new 2026 curriculum).
+A statistical analyzer script for the project `push_swap` from the 42 core curriculum (version 1.1 in the new 2026 curriculum) that I did together with <sebarrei@student.42berlin.de> / <https://github.com/SrRndm>.
 
 ## Instructions
 
