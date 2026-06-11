@@ -22,7 +22,7 @@ You can also process the generated data any way you wish, and feel free to adapt
 
 ### Bash Script & Data
 
-In the script `push_swap_analyzer.sh`, first a sequence is generated with a random size and and a random disorder. (See below in the Helper Programs section). `push_swap` sorts this sequence using all four strategies, and the number of operations is counted using. This gives a data point that contains:
+In the script `push_swap_analyzer.sh`, first a sequence is generated with a random size and and a random disorder. (See below in the Helper Programs section). `push_swap` sorts this sequence using all four strategies, and the number of operations is counted. This gives a data point that contains:
 1. the size of the sequence,
 2. the disorder (between 0 and 1)
 3. number of operations for the simple strategy,
