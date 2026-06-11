@@ -10,13 +10,13 @@ A statistical analyzer script for the project `push_swap` from the 42 core curri
 
 Run with
 ```
-./push_swap_analyzer.sh [-n <# points>] [-o <filename>] <push_swap path>
+./push_swap_analyzer.sh [-p <# points>] [-o <filename>] <push_swap path>
 ```
 for example:
 ```
-./push_swap_analyzer.sh -n 128 -o data.csv ../push_swap/push_swap
+./push_swap_analyzer.sh -p 128 -o data.csv ../push_swap/push_swap
 ```
-It appends data to the file given by the `-o` flag. The number of data points is given by the `-n` flag. Defaults are: `-n`: 256; `-o`: `data.csv`. You have to give the path to your `push_swap` program.
+It appends data to the file given by the `-o` flag. The number of data points is given by the `-n` flag. Defaults are: `-p`: 256; `-o`: `data.csv`. You have to give the path to your `push_swap` program.
 
 I then passes the data to a Gnuplot script which produces a few graphs.
 
