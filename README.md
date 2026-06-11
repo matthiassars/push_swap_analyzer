@@ -1,4 +1,4 @@
-# 🔀 push_swap_analyzer
+# 🔀 `push_swap` Analyzer
 
 *by Matthias Sars, <msars@student.42berlin.de>*
 
