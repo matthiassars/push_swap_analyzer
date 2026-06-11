@@ -56,7 +56,7 @@ The last plot shows the number of operations against the sequence length on a lo
 #### `generate_seq`
 
 ```
-./generate_seq [-o <filename>] [-n size] [-m max=size] [-d disorder]
+./generate_seq [-o <filename>] [-n <size>] [-m <maximum size>] [-d <disorder>]
 ```
 
 This generates a sequence and prints it to `stdout` and appends the size and disorder numbers to the file given by the `-o` flag, or `stderr` if no filename is given. (Both followed by a comma.)
