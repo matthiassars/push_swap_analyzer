@@ -12,6 +12,10 @@ Run with
 ```
 ./push_swap_analyzer.sh [-n <# points>] [-o <filename>] <push_swap path>
 ```
+for example:
+```
+./push_swap_analyzer.sh -n 128 -o data.csv ../push_swap/push_swap
+```
 It appends data to the file given by the `-o` flag. The number of data points is given by the `-n` flag. Defaults are: `-n`: 256; `-o`: `data.csv`. You have to give the path to your `push_swap` program.
 
 I then passes the data to a Gnuplot script which produces a few graphs.
@@ -58,7 +62,6 @@ The last plot shows the number of operations against the sequence length on a lo
 ```
 ./generate_seq [-o <filename>] [-n <size>] [-m <maximum size>] [-d <disorder>]
 ```
-
 This generates a sequence and prints it to `stdout` and appends the size and disorder numbers to the file given by the `-o` flag, or `stderr` if no filename is given. (Both followed by a comma.)
 
 The sequence size is either given by the `-n` flag, or a random number up to the number given by the `-m` flag. This is 1024 by default.
@@ -67,6 +70,13 @@ The numbers in the sequence range from 0 to size - 1, without duplicates.
 
 You can set a disorder number (between 0 and 1) with the `-d` flag. The program will try to match this number. By default, a random disorder number is chosen. Note that this is not the same as generating a random sequence. (If you want a randomly shuffled sequence, you can set `-d .5`.)
 
+For example:
+```
+$ ./generate_seq -m 8 -d .75
+4 1 2 3 0
+5,0.700000,
+```
+
 ### `count_ps_ops`
 
 ```
@@ -74,3 +84,11 @@ You can set a disorder number (between 0 and 1) with the `-d` flag. The program 
 ```
 
 This reads the push_swap operations from `stdin` and applies them to the given sequence. If the sorting is correct, it appends the number of operations (followed by a comma) to the file given by the `-o` flag, or prints it to `stdout` if no filename is given. It it doesn't check out, it prints `KO,`.
+
+
+For example (in Bash):
+```
+$ ARG=$(./generate_seq -n 5 -d 1) ; ./push_swap --simple $ARG | ./count_ps_ops $ARG
+5,1.000000,
+10,
+```
